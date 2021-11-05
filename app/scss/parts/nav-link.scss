@@ -1,0 +1,213 @@
+.main-nav {
+  height: 70px;
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  opacity: 0;
+  z-index: -1;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+  padding-top: 6px;
+  padding-bottom: 8px;
+
+  &.visible {
+    z-index: 1011;
+    opacity: 1;
+    box-shadow: 0px 7px 30px rgb(0 0 0 / 15%);
+
+    transition-property: opacity;
+    transition-duration: 0.5s;
+  }
+
+  .main-menu {
+    width: 100%;
+    margin-right: 35px;
+
+    ul {
+      padding: 0;
+      margin: 0;
+      margin-right: 51px;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      li {
+        position: relative;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 400;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 28px;
+        position: relative;
+        list-style: none;
+        margin-bottom: 5px;
+
+        &:last-child:before {
+          display: none;
+        }
+
+        &:before {
+          content: '';
+          width: 6px;
+          height: 6px;
+          background-color: #fec400;
+          margin-right: 10px;
+          position: absolute;
+          top: 22px;
+          right: -48px;
+          left: auto;
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+
+  .main-btn {
+    min-width: 250px;
+    min-height: 56px;
+    border: none;
+    position: relative;
+    font-size: 12px;
+    line-height: 17px;
+    z-index: 1;
+    border-radius: 30px;
+  }
+
+  a {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #13141c;
+    text-decoration: underline;
+    text-decoration-color: rgb(0 0 0 / 10%);
+  }
+
+  @include _1400 {
+    .main-menu ul li:before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background-color: #fec400;
+      margin-right: 10px;
+      position: absolute;
+      top: 22px;
+      right: -42px;
+      left: auto;
+      border-radius: 100%;
+    }
+  }
+
+  @include _1200 {
+    .main-menu ul li:before {
+      display: none;
+    }
+  }
+
+  @include _992 {
+    &.visible {
+      padding-right: 0;
+    }
+
+    .visible-xs {
+      display: block;
+      position: relative;
+      text-align: center;
+    }
+
+    .toggle-menu {
+      font-size: 16px;
+
+      img {
+        max-width: 30px;
+        margin-right: 8px;
+      }
+    }
+
+    .main-menu {
+      display: none !important;
+      position: fixed;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: #fff;
+      padding-top: 100px;
+      padding-left: 70px;
+      z-index: 10;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 0.1rem 1.7rem rgb(0 0 0 / 5%);
+
+      &.show3 {
+        display: block !important;
+      }
+
+      ul {
+        margin-right: 20px;
+        display: block;
+
+        li {
+          position: relative;
+          height: auto;
+          display: flex;
+          align-items: center;
+          margin-bottom: 25px;
+          padding-left: 15px;
+
+          &:before {
+            display: block;
+            top: 7px;
+            right: auto;
+            left: 0;
+            content: '';
+            width: 6px;
+            height: 6px;
+            background-color: #fec400;
+            margin-right: 10px;
+            position: absolute;
+          }
+
+          &:last-child:before {
+            display: block;
+          }
+
+          a {
+            font-size: 16px;
+
+            br {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .close3 {
+        img {
+          max-width: 19px;
+          margin-right: 5px;
+        }
+
+        &.visible-xs {
+          position: absolute;
+          left: 30px;
+          top: 26px;
+          display: flex !important;
+          align-items: center;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  @include _375 {
+    .main-btn {
+      font-size: 12px !important;
+      width: 200px !important;
+      min-width: 200px !important;
+    }
+  }
+}

@@ -1,0 +1,980 @@
+.close {
+  width: auto !important;
+  height: auto !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+  opacity: 1;
+  background: none !important;
+  border: none !important;
+  position: absolute !important;
+  right: -35px;
+  opacity: 1 !important;
+  top: 0;
+  z-index: 99;
+}
+
+@include _1400 {
+  .close {
+    top: -36px;
+    right: 0;
+  }
+}
+
+.modal-form {
+  z-index: 9;
+}
+
+.modal-body {
+  padding: 0;
+}
+
+.soc {
+  padding-top: 10px;
+  padding-bottom: 15px;
+  width: 90px;
+  height: 95px;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 4px;
+
+  .round2 {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    margin-bottom: -3px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  span {
+    color: rgba(19, 21, 26, .5);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .28px;
+  }
+
+  &.active,
+  &:hover {
+    box-shadow: 0 20px 70px rgb(0 0 0 / 7%);
+    border-radius: 6px;
+    background-color: #fff;
+  }
+}
+
+.sms .round2 {
+  background-color: #3dc189;
+}
+
+.whats .round2 {
+  background-color: #25d366;
+}
+
+.viber .round2 {
+  background-color: #7360f2;
+}
+
+.telega .round2 {
+  background-color: #00a1f2;
+}
+
+.modal-way {
+  .modal-dialog {
+    padding-top: 100px;
+    max-width: 940px;
+
+  }
+
+  .modal-content {
+    padding: 60px 50px;
+    padding-right: 102px;
+    border-radius: 14px;
+
+    @include _460 {
+      padding-top: 30px !important;
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+      padding-bottom: 30px !important;
+    }
+
+    p {
+      color: #000000;
+      font-size: 18px;
+      font-weight: 400;
+      font-style: normal;
+      letter-spacing: normal;
+      line-height: 26px;
+    }
+
+    h5 {
+      color: #000000;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 32px;
+      text-align: left;
+      text-transform: uppercase;
+      font-style: normal;
+      letter-spacing: 0.36px;
+      margin-bottom: 20px;
+      margin-top: 30px;
+    }
+  }
+
+
+
+
+}
+
+#callback {
+  .modal-dialog {
+    max-width: 900px;
+    margin: 1.75rem auto;
+
+    .modal-content {
+      border-radius: 16px;
+
+      .modal-form {
+        border-radius: 16px;
+        overflow: hidden;
+
+        .left-modal {
+          background-image: url(../img/girl.jpg);
+          width: 100%;
+          height: 722px;
+          position: relative;
+          background-size: cover;
+          border-radius: 16px 0 0 16px;
+
+          .name {
+            position: absolute;
+            left: 50px;
+            bottom: 137px;
+            color: #4d3b00;
+            font-size: 20px;
+            font-weight: 500;
+            background-image: url(../img/pra.png);
+            width: 267px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9;
+            line-height: 26px;
+          }
+
+          span {
+            position: absolute;
+            left: 80px;
+            bottom: 95px;
+            font-size: 16px;
+            line-height: 24px;
+            background-image: url(../img/pra2.png);
+            width: 307px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: rgb($black, 0.6);
+          }
+        }
+
+        .right-modal {
+          .form {
+            box-shadow: none;
+            height: 712px;
+            margin: 0;
+            background-color: #fff;
+            padding: 0;
+            position: relative;
+            z-index: 9;
+            margin-top: 10px;
+            width: 480px;
+
+            .bordered {
+              padding-top: 39px;
+              padding-left: 50px;
+              width: 100%;
+              height: 100%;
+              border: none;
+              padding-right: 50px;
+
+              h4 {
+                color: #13151a;
+                font-size: 34px;
+                font-weight: 700;
+                line-height: 40px;
+                margin-bottom: 10px;
+              }
+
+              div {
+                color: #0f1013;
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 30px;
+              }
+            }
+
+            form {
+              position: relative;
+              z-index: 9;
+
+              h6,
+              .span {
+                color: #76767b;
+                font-size: 13px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: .84px;
+                display: block;
+                margin-top: 20px;
+                opacity: 1;
+              }
+
+              input {
+                width: 380px;
+                height: 90px;
+                box-shadow: inset 0 3px 7px rgb(25 23 23 / 5%);
+                border-radius: 10px;
+                border: 1px solid #ebebeb;
+                background-color: #fafbfb;
+                margin-top: 12px;
+                padding-left: 36px;
+                margin-bottom: 18px;
+                border-radius: 43px;
+                font-size: 1.8rem;
+              }
+
+              .main-btn {
+                width: 372px;
+                height: 96px;
+                border-radius: 48px;
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include _992 {
+    .modal-dialog .modal-content .modal-form .left-modal .name {
+      left: 5px;
+      bottom: 137px;
+      width: 278px;
+    }
+
+    .modal-dialog .modal-content .modal-form .left-modal span {
+      position: absolute;
+      left: 0px;
+      bottom: 95px;
+      height: 50px;
+
+    }
+  }
+
+  @include _768 {
+    .left-modal {
+      display: none !important;
+    }
+
+    .modal-content {
+      width: 460px;
+      margin: 0 auto;
+    }
+
+    .right-modal {
+      .form {
+        width: 460px !important;
+
+        form {
+
+          input,
+          .main-btn {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+
+  @include _460 {
+
+    .modal-content {
+      width: 98%;
+      margin: 0 auto;
+    }
+
+    .right-modal {
+      width: 100% !important;
+
+      .form {
+        width: 100% !important;
+        height: auto !important;
+
+        .bordered {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+          padding-bottom: 30px !important;
+          padding-top: 20px !important;
+
+          div {
+            br {
+              display: none;
+            }
+          }
+        }
+
+        form {
+
+          input,
+          .main-btn {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+
+  @include _375 {
+    .modal-content {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .right-modal {
+
+      .form {
+
+        .bordered {
+          padding-left: 5px !important;
+          padding-right: 5px !important;
+          padding-bottom: 20px !important;
+          padding-top: 10px !important;
+
+          h4 {
+            font-size: 28px !important;
+            line-height: 35px !important;
+          }
+
+          div {
+            br {
+              display: none;
+            }
+          }
+
+          .soc span {
+            color: rgba(19, 21, 26, .5);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: .28px;
+          }
+        }
+
+        form {
+
+          input,
+          .main-btn {
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+#presentation {
+  z-index: 9999;
+  background-image: none;
+  padding-top: 0px;
+
+  .modal-dialog {
+    max-width: 1224px;
+    min-width: auto;
+    width: 1200px;
+    border-radius: 16px;
+
+    .modal-content {
+      background-image: url('../img/form-bg.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 16px;
+
+      .modal-body {
+        padding-left: 30px;
+        padding-top: 33px;
+        padding-bottom: 51px;
+        padding-right: 30px;
+        border: none;
+
+
+      }
+    }
+
+    @include _1200 {
+      width: 75%;
+      padding-top: 40px;
+
+      .consult .pres-pic {
+        bottom: -142px;
+        left: -284px;
+      }
+
+    }
+
+    @include _992 {
+      width: 95%;
+
+      .consult .pres-pic {
+        bottom: -212px;
+        left: -284px;
+      }
+
+      .form {
+        margin-bottom: 0;
+      }
+    }
+
+    @include _576 {
+      .form {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    @include _460 {
+      width: 100%;
+      margin-left: 0;
+      padding-top: 0;
+
+      .modal-content {
+        .modal-body {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+
+  .form {
+    right: 0px;
+  }
+
+  .present {
+    padding-right: 0px;
+  }
+
+  .pres-pic {
+    bottom: -277px;
+    left: -337px;
+
+    picture img {
+      width: 1444px;
+    }
+
+    .pdf {
+      top: 59px;
+      left: 400px;
+    }
+  }
+}
+
+#consult {
+  z-index: 9999;
+  background-image: none;
+
+  .modal-dialog {
+    max-width: 1224px;
+    min-width: auto;
+    width: 1200px;
+    border-radius: 16px;
+
+    .modal-content {
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 16px;
+
+      .consultation {
+        .consultation__image {
+          position: absolute;
+          top: 28px;
+          right: -653px;
+          z-index: 1;
+
+          img {
+            width: 78%;
+          }
+        }
+      }
+    }
+
+    @include _1200 {
+      width: 95%;
+
+      .consultation {
+        &-inner {
+          min-width: 830px;
+          max-width: 830px;
+        }
+      }
+    }
+
+    @include _992 {
+      width: 450px;
+
+      .consultation {
+        &-inner {
+          min-width: 100%;
+          max-width: 100%;
+          padding-left: 20px;
+          padding-right: 20px;
+
+          input,
+          .position-relative,
+          .main-btn,
+          .form-button-check {
+            width: 100%;
+          }
+
+          .main-btn {
+            margin-top: 20px;
+          }
+
+        }
+
+        &-list {
+          flex-direction: column;
+          padding-right: 0;
+
+
+
+          li {
+            margin-bottom: 15px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            br {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    @include _460 {
+      width: 100%;
+      margin-left: 0;
+
+      .consultation {
+        &-inner {
+          padding-top: 30px;
+        }
+
+        &__title {
+          font-size: 32px;
+          line-height: 42px;
+        }
+      }
+    }
+  }
+
+}
+
+#booking {
+  .modal-dialog {
+    max-width: 460px;
+
+    .modal-content {
+      background-color: transparent;
+      border: none;
+
+      .form {
+        height: auto;
+        background-image: none;
+        background-color: #fff;
+        padding-bottom: 35px;
+        margin-top: 0;
+        background-position-y: 786px;
+        width: 460px;
+        height: auto;
+        box-shadow: 0 40px 80px rgb(0 0 0 / 5%);
+        border-radius: 14px;
+        background-color: #ffffff;
+        padding-left: 50px;
+        padding-top: 55px;
+        padding-right: 50px;
+
+        .bordered {
+          padding-top: 0;
+          padding-left: 0;
+          padding-right: 0;
+
+          h4 {
+            color: #1c1c1c;
+            font-size: 38px;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: normal;
+            line-height: 44px;
+            margin-bottom: 24px;
+          }
+
+          div {
+            color: #0f1013;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+          }
+
+          form {
+            .span {
+              letter-spacing: .84px;
+              opacity: 1;
+              font-size: 14px;
+              color: #76767b;
+              color: #a6a6a6;
+              font-size: 14px;
+              font-weight: 600;
+              font-style: normal;
+              letter-spacing: normal;
+              line-height: 28px;
+              text-align: left;
+              text-transform: uppercase;
+              font-style: normal;
+              letter-spacing: 0.28px;
+            }
+
+            .input {
+              width: 100% !important;
+              height: 90px;
+              box-shadow: inset 0 5px 15px rgb(5 5 18 / 3%);
+              border-radius: 6px;
+              border: 1px solid #f2f2f5;
+              background-color: #fafafc;
+              margin: 0;
+              margin-top: 5px;
+              border-radius: 43px;
+              margin-bottom: 25px;
+              padding-right: 25px;
+              padding-left: 36px;
+              font-size: 18px;
+            }
+
+            .frm2 {
+              margin: 0;
+              justify-content: flex-start;
+              margin: 30px 0;
+              display: flex;
+              align-items: center;
+              padding: 0;
+              justify-content: center;
+              text-align: center;
+              color: #0f1013;
+              font-size: 20px;
+              font-weight: 400;
+              line-height: 30px;
+
+              input {
+                float: left;
+                margin-left: -1.5em;
+                display: none;
+                width: auto !important;
+                height: auto !important;
+              }
+
+              label {
+                color: #0f1013;
+                font-size: 16px;
+                font-weight: 400;
+                font-style: normal;
+                letter-spacing: normal;
+                line-height: 24px;
+                text-align: left;
+
+                &:before {
+                  width: 16px;
+                  height: 16px;
+                  box-sizing: border-box;
+                  border: 1px solid #ddd;
+                  border-radius: 2px;
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  top: 5px;
+                  border-radius: 3px;
+                }
+
+                &:after {
+                  width: 8px;
+                  height: 8px;
+                  border-radius: 1px;
+                  background: none;
+                  background-color: #ff2a6d;
+                  left: 4px;
+                  top: 9px;
+                }
+              }
+            }
+
+            .main-btn {
+              width: 100%;
+              height: 96px;
+              border-radius: 48px;
+              border: none;
+              color: #fff;
+              text-shadow: 0 1px 0 rgb(22 102 67 / 50%);
+              font-size: 15px;
+              font-weight: 600;
+            }
+
+          }
+        }
+      }
+    }
+
+    @include _576 {
+      max-width: 450px;
+      margin: 0 auto;
+
+      .form {
+        width: 450px !important;
+      }
+    }
+
+    @include _460 {
+      max-width: 100%;
+
+      .form {
+        width: 100% !important;
+        padding-top: 30px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+      }
+    }
+
+    @include _375 {
+
+      h4 {
+        font-size: 32px !important;
+        line-height: 42px !important;
+      }
+
+      .form {
+        width: 100% !important;
+        padding-top: 20px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+      }
+    }
+  }
+}
+
+#gev,
+#sap,
+#chud,
+#sob {
+  .modal {
+    &-content {
+      border-radius: 16px;
+      border: none;
+    }
+
+    &-dialog {
+      max-width: 923px;
+
+      @include _992 {
+        margin-top: 50px;
+        max-width: 450px !important;
+
+        .formm {
+          flex-direction: column !important;
+
+          .left-modal {
+            background-image: url('../img/gevondyan-m.png');
+            background-size: cover;
+            height: 450px;
+            width: 100%;
+            border-radius: 0 16px 0 0;
+
+            picture {
+              display: none;
+            }
+          }
+
+          .right-modal {
+            height: auto;
+            padding-top: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 30px;
+
+            .form,
+            .bordered,
+            .bordered>div {
+              width: 100%;
+            }
+
+            .bordered {
+
+              p,
+              li {
+                width: 100%;
+
+                br {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      @include _460 {
+        max-width: 100% !important;
+
+      }
+    }
+
+    &-form {
+      .left-modal {
+        border-radius: 16px 0 0 16px;
+      }
+
+      .right-modal {
+        padding: 50px 50px;
+        width: 100%;
+        height: 457px;
+
+        div {
+          width: 594px;
+        }
+
+        h4 {
+          font-size: 28px;
+          font-weight: 700;
+          line-height: 36px;
+          margin-bottom: 15px;
+        }
+
+        p,
+        ul,
+        li {
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 26px;
+          margin-bottom: 15px;
+        }
+
+        li {
+          margin-bottom: 0;
+
+          &:first-child {
+            margin-top: 5px;
+          }
+        }
+
+        .first {
+          li {
+            list-style-type: disc !important;
+            margin-left: 15px;
+            margin-bottom: 5px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            &::marker {
+              color: #00a1f2;
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+
+    }
+
+
+  }
+}
+
+#sap {
+  .modal {
+    &-dialog {
+      max-width: 696px;
+
+      @include _992 {
+
+        .formm {
+
+          .left-modal {
+            background-image: url('../img/saprikin-m.png');
+          }
+        }
+      }
+    }
+
+    &-form {
+      .right-modal {
+        height: 388px;
+      }
+    }
+  }
+}
+
+#chud {
+  .modal {
+    &-dialog {
+      max-width: 959px;
+
+      @include _992 {
+        margin-top: 70px;
+
+        .formm {
+
+          .left-modal {
+            background-image: url('../img/chudaikina-m.png');
+          }
+        }
+      }
+    }
+
+    &-form {
+      .right-modal {
+        height: 714px;
+      }
+    }
+  }
+}
+
+#sob {
+  .modal {
+    &-dialog {
+      max-width: 945px;
+
+      @include _992 {
+        margin-top: 50px;
+
+        .formm {
+
+          .left-modal {
+            background-image: url('../img/sobolev-m.png');
+          }
+        }
+      }
+    }
+
+    &-form {
+      .right-modal {
+        height: 564px;
+      }
+    }
+  }
+}

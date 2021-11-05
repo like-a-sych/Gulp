@@ -1,0 +1,36 @@
+#security-politics {
+  z-index: 9999;
+
+  .modal-dialog {
+    max-width: 840px;
+
+    .modal-content {
+      border: none;
+      border-radius: 11px;
+
+      @include _992 {
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      @include _576 {
+        width: 100%;
+      }
+
+      .modal-body {
+        padding: 0;
+        background: #fff;
+        box-shadow: 0px 10px 40px rgb(17 36 72 / 7%);
+        border-radius: 8px;
+
+        h3 {
+          font-size: 2rem;
+        }
+
+        .text {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}

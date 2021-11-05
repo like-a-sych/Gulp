@@ -16,7 +16,7 @@ let isProd = false; // dev by default
 function browsersync() {
   browserSync.init({
     server: {
-      baseDir: 'dist/'
+      baseDir: 'dist'
     }
   })
 }
@@ -84,33 +84,39 @@ const styles = () => {
       cascade: false,
     }))
     .pipe(gulpif(!isProd, sourcemaps.write('.')))
-    .pipe(dest('dist/css/'))
+    .pipe(dest('dist/css'))
+    .pipe(browserSync.stream());
+};
+
+const styleslight = () => {
+  return src('app/scss/style.scss')
+    .pipe(gulpif(!isProd, sourcemaps.init()))
+    .pipe (sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(autoprefixer({
+      cascade: false,
+    }))
+    .pipe(gulpif(!isProd, sourcemaps.write('.')))
+    .pipe(dest('dist/css'))
     .pipe(browserSync.stream());
 };
 
 function build() {
   return src([
-    'app/css/*.css',
-    'app/css/*.map',
     'app/fonts/**/*',
-    'app/js/main.min.js',
-    'app/js/modules.min.js',
-    'app/*.html'
   ], {base: 'app'})
   .pipe(dest('dist'))
 }
 
 function watching() {
-  watch(['app/scss/**/*.scss'], parallel(styles, webpconvert));
+  watch(['app/scss/**/*.scss'], styleslight);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/*.html']).on('change', browserSync.reload);
-  watch('app/img/*.{jpg,jpeg,png,svg}', images);
-	watch('app/img/**/*.{jpg,jpeg,png}', images);
+	watch('app/img/**/*.{jpg,jpeg,png,svg}', series(webpconvert, images));
   watch(['app/parts/*.html'], htmlInclude);
   watch(['app/*.html'], htmlInclude);
 }
 
-
+exports.html = htmlInclude;
 exports.styles = styles;
 exports.watching = watching;
 exports.browsersync = browsersync;
@@ -119,6 +125,6 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 exports.webpconvert = webpconvert;
 
-exports.build = series(cleanDist, webpconvert, images, build);
-exports.cache = series(cleanCache, build);
-exports.default = parallel(styles, scripts, htmlInclude, browsersync, watching);
+exports.build = series(cleanDist, webpconvert, images, styles, scripts,htmlInclude, build);
+exports.cache = series(cleanCache, styles, scripts, build);
+exports.default = parallel(htmlInclude, styles, scripts,  browsersync, watching);
