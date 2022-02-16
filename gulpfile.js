@@ -17,7 +17,8 @@ function browsersync() {
   browserSync.init({
     server: {
       baseDir: 'dist'
-    }
+    },
+    reloadDelay: 500
   })
 }
 
@@ -49,6 +50,29 @@ function webpconvert() {
   return src(['app/img/**/*', '!app/img/**/*.webp'])
   .pipe(webp())
   .pipe(dest('dist/img'))
+}
+
+
+
+function images_bufer() {
+  return src('app/img/bufer/*')
+    .pipe(imagemin([
+      imagemin.gifsicle({interlaced: true}),
+      imagemin.mozjpeg({quality: 75, progressive: true}),
+      imagemin.optipng({optimizationLevel: 5}),
+      imagemin.svgo({
+        plugins: [
+            {removeViewBox: true},
+            {cleanupIDs: false}
+        ]
+    })
+    ]))
+    .pipe(dest('dist/img/bufer'))
+}
+function webpconvert_bufer() {
+  return src(['app/img/bufer/*', '!app/img/**/*.webp'])
+  .pipe(webp())
+  .pipe(dest('dist/img/bufer'))
 }
 
 const htmlInclude = () => {
@@ -111,8 +135,8 @@ function watching() {
   watch(['app/scss/**/*.scss'], styleslight);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/*.html']).on('change', browserSync.reload);
-	watch('app/img/**/*.{jpg,jpeg,png,svg}', series(webpconvert, images));
-  watch(['app/parts/*.html'], htmlInclude);
+	watch('app/img/bufer/*.{jpg,jpeg,png,svg}', series(webpconvert_bufer, images_bufer));
+  watch(['app/**/*.html'], htmlInclude);
   watch(['app/*.html'], htmlInclude);
 }
 
