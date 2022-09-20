@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="ru">
-@include('parts/head.html')
+@include('_parts/head.html')
 
 <body>
-  @include('parts/header.html')
+	<div class="wrapper">
+		@include('_parts/header.html')
 
-  <main>
+		<main class="main">
 
-  </main>
-  @include('parts/footer.html')
+		</main>
 
-  @include('parts/modal.html')
-  @include('parts/_politic.html')
+		@include('_parts/footer.html')
+	</div>
+	@include('_parts/modal.html')
+	@include('_parts/_politic.html')
 
-  @include('parts/scripts.html')
+	@include('_parts/scripts.html')
 </body>
 
 </html>

@@ -1,0 +1,22 @@
+.btn-close {
+	position: absolute;
+	top: 0px;
+	right: -40px;
+	width: 30px;
+	background: none;
+	@media (max-width: (1300px)) {
+		top: -30px;
+		right: 0;
+	}
+}
+.modal-body {
+	padding: 0;
+	max-width: 100%;
+}
+.modal-content {
+	border-radius: 20px;
+	border: none;
+}
+.modal-dialog {
+	padding-top: 40px;
+}

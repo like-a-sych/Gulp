@@ -1,0 +1,20 @@
+<div class="thank-section__form">
+	<div class="thank-section__inner">
+		<div class="form-block__input">
+			<input type="tel" class="form-control" name="phone" placeholder="Введите ваш телефон"
+				value="<?php echo $_POST['phone'] ?>" onfocus="this.value=''" required="">
+		</div>
+		<button data-bs-toggle="modal" data-bs-target="#callback2" class="_main-btn">
+			<span>Нашли ошибку в номере?</span>
+			Нажмите здесь и введите<br>
+			корректный номер
+		</button>
+	</div>
+	<div class="form-in__bottom">
+		<div class="form-in__form-check form-check">
+			<input type="checkbox" class="check" checked="" id="check-thank">
+			<label class="form-check-label" for="check-thank">Я принимаю условия <a data-bs-toggle="modal"
+					data-bs-target="#security-politics">политики конфеденциальности</a></label>
+		</div>
+	</div>
+</div>

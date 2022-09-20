@@ -1,0 +1,23 @@
+<form class="needs-validation main-form" novalidate="" method="POST" action="thank.php" novalidate=""
+	enctype="multipart/form-data">
+	<input type="hidden" name="from" value="ПОЛУЧИТЬ PDF-КАТАЛОГ ПОКРЫТИЙ + 3 ПОДАРКА">
+	<input type="hidden" name="token" value="<?php echo(rand(10000,99999));?>" />
+	<div class="main-form__container">
+		<div class="main-form__item">
+			<div class="main-form__field">
+				<h5 class="main-form__label">Введите ваш телефон:</h5>
+				<input type="tel" class="main-form__input form-control" name="phone" placeholder="+7 (___)___-__-__"
+					required="">
+			</div>
+		</div>
+		<div class="main-form__item">
+			<div class="main-form__button">
+				<button type="submit" class="_main-btn">
+					ПОЛУЧИТЬ PDF-КАТАЛОГ<br>
+					ПОКРЫТИЙ + 3 ПОДАРКА
+				</button>
+				@include('../_parts/_form-check1.html')
+			</div>
+		</div>
+	</div>
+</form>
